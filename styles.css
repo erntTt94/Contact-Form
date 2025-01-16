@@ -1,0 +1,281 @@
+:root {
+    --green-200: hsl(148, 38%, 91%);
+    --green-600: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+    --white: hsl(0, 0%, 100%);
+    --grey-500: hsl(186, 15%, 59%);
+    --grey-900: hsl(187, 24%, 22%);
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: Karla, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--green-200);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--white);
+    border: none;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 31rem;
+    gap: 1rem;
+}
+
+.names {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.fName,
+.lName,
+.email,
+.message {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: var(--fw-700);
+    color: var(--grey-900);
+    font-size: 1.6rem;
+}
+
+label {
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+}
+
+input[type=text],
+input[type=email] {
+    border-radius: 0.3rem;
+    border: 1px solid var(--grey-500);
+    font-weight: var(--fw-400);
+    height: 2.3rem;
+    padding-left: 1rem;
+}
+
+.fName {
+    flex: 1;
+}
+
+.lName {
+    flex: 1;
+}
+
+textarea {
+    resize: none;
+    border-radius: 0.3rem;
+    border: 1px solid var(--grey-500);
+    font-weight: var(--fw-400);
+    color: var(--grey-500);
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+legend {
+    padding-bottom: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.query-box {
+    display: flex;
+    gap: 1rem;
+}
+
+.query {
+    border: 1px solid var(--grey-500);
+    padding: 0.6rem 1rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.query label {
+    padding-left: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--grey-900);
+    padding-bottom: 0;
+}
+
+.query input {
+    appearance: none;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    outline: none;
+    box-shadow: 0 0 0 1.5px rgba(172, 172, 172, 0.566);
+}
+
+input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+
+input[type='radio']:checked:before {
+    background: green;
+}
+
+.error {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--red);
+}
+
+.contact {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin: 0.8rem 0;
+}
+
+.contact label {
+    padding-left: 0.7rem;
+    padding-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.contact input {
+    font-size: 0.9rem;
+}
+
+button {
+    background-color: var(--green-600);
+    color: var(--white);
+    font-weight: var(--fw-400);
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.9rem;
+    cursor: pointer;
+}
+
+input[type=text]:hover,
+input[type=email]:hover {
+    border: 1.5px solid var(--green-600);
+    cursor: pointer;
+}
+
+.query:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--grey-900);
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+    outline: 1px solid rgba(2, 159, 2, 0.836);
+}
+
+input[type=text]:active,
+input[type=email]:active,
+textarea:active {
+    border: 1.5px solid green;
+}
+
+textarea {
+    color: black;
+}
+
+
+
+
+
+.success-container {
+    padding: 1.2rem;
+    background-color: var(--grey-900);
+    color: var(--white);
+    border-radius: 0.4rem;
+    position: absolute;
+    top: 0.5rem;
+}
+
+.success-container div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.success-container img {
+    width: 16px;
+    height: 16px;
+}
+
+.success-container span {
+    font-weight: var(--fw-700);
+}
+
+.success-container p {
+    font-size: 0.8rem;
+    color: var(--green-200);
+}
+
+.hidden {
+    display: none;
+}
+
+.error-border {
+    outline: 1px solid red;
+}
+
+@media (max-width: 548px) {
+    body {
+        margin: 1rem 0.5rem;
+    }
+
+    form {
+        width: auto;
+    }
+
+    .names {
+        flex-direction: column;
+    }
+
+    .query-box {
+        flex-direction: column;
+    }
+}
