@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/erntTt94/Contact-Form](https://github.com/erntTt94/Contact-Form)
+- Live Site URL: [https://ernttt94.github.io/Contact-Form/](https://ernttt94.github.io/Contact-Form/)
 
 ## My process
 
